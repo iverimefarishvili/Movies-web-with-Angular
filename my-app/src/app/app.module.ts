@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AuthComponent } from './auth/auth.component';
+import { RouterModule, Routes } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { AuthComponent } from './auth/auth.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
