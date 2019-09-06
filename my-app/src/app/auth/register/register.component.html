@@ -7,27 +7,21 @@
                 <input 
                 type="email" 
                 placeholder="Email Address" 
+                name="email"
                 required
                 ngModel
-                name="email"
+                email
+                #email="ngModel"
                 >
-                <span class="help-block">Please Enter a Valid Email</span>
+                <span class="help-block" *ngIf="!email.valid && email.touched">Please Enter a Valid Email</span>
                 <input 
                 type="password" 
                 placeholder="Password" 
-                required
                 name="password"
-                ngModel
-                
-                >
-                <input 
-                type="password" 
-                placeholder="Password Confirmation" 
                 required
-                ngModel
-                name="retypepassword"
+                ngModel 
+                minlength="6"
                 >
-                
                 <input type="submit" value="Register">
             </form>
         </div>

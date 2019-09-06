@@ -10,14 +10,20 @@ import {NgForm} from '@angular/forms';
 
 export class LoginComponent implements OnInit {
 
+  isLoading = false;
+  error: string = null;
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  onSubmit(f: NgForm) {
-    console.log(f.value);
-    console.log(f.valid);
+  onSubmit(form: NgForm) {
+    if (!form.valid) {
+      return;
+    }
+    const email = form.value.email;
+    const password = form.value.password;
   }
 
 }
