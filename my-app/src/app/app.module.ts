@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AuthComponent } from './auth/auth.component';
 import { StoreModule} from '@ngrx/store';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     StoreRouterConnectingModule.forRoot(),
     HttpClientModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    
   ],
   providers: [Store],
   bootstrap: [AppComponent]
