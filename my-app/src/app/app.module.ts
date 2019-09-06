@@ -19,6 +19,7 @@ import { AuthModule } from './auth/auth.module';
 import { EffectsModule } from '@ngrx/effects';
 import { AuthEffects } from './auth/store/auth.effects';
 import { environment } from 'src/environments/environment';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { environment } from 'src/environments/environment';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    AuthComponent
+    AuthComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
