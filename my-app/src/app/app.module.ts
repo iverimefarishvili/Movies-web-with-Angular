@@ -7,6 +7,7 @@ import { FormsModule }   from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -15,6 +16,10 @@ import { AuthComponent } from './auth/auth.component';
 import { StoreModule} from '@ngrx/store';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from './auth/auth.module';
+import { EffectsModule } from '@ngrx/effects';
+import { AuthEffects } from './auth/store/auth.effects';
+import { environment } from 'src/environments/environment';
+
 
 @NgModule({
   declarations: [
@@ -30,9 +35,10 @@ import { AuthModule } from './auth/auth.module';
     AppRoutingModule,
     StoreModule.forRoot({}),
     StoreRouterConnectingModule.forRoot(),
-    HttpClientModule,
+    EffectsModule.forRoot([AuthEffects]),
     FormsModule,
     CommonModule,
+    HttpClientModule
     
   ],
   providers: [Store],
